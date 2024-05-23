@@ -37,7 +37,7 @@ class PhysicalGameState {
 
     int width = 8;
     int height = 8;
-    vector<int> terrain = {};
+    vector<int> terrain ;
     vector<Player> players;
     
     unordered_map< int, Unit*> unitsP0;

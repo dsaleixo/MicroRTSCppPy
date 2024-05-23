@@ -27,12 +27,15 @@ GameState::GameState(const GameState &other) {
     this->utt = other.utt;
     this->time = other.time;
     this->_free = new bool* [this->pgs->getWidth()];
+    
     for (int i = 0; i < this->pgs->getWidth(); i++) {
+        
         this->_free[i] = new bool[this->pgs->getHeight()];
-        for (int j = 0; j < this->pgs->getWidth(); j++) {
+        for (int j = 0; j < this->pgs->getHeight(); j++) {
             this->_free[i][j] = other._free[i][j];
         }
     }
+  
     this->unitCancelationCounter = other.unitCancelationCounter;
     for (auto &uaa : other.unitActions) {
             auto *u =this->pgs->getUnit(uaa.first, uaa.second.unit.player);

@@ -51,9 +51,9 @@ class Test6:
            
             
             #gs2 = gs
-         
+            
             gs2 = GameState(gs)
-          
+            print("dd")
             pgs = gs2.getPhysicalGameState()
             ai0 = CombatRush(pgs,utt,"Light")
             ai1 = CombatRush(pgs,utt,"Heavy")
@@ -105,14 +105,18 @@ class Test6:
        
         def test(self,map,arg):
             utt = UnitTypeTable(2);
+            
             pgs = PhysicalGameState.load(map,utt)
+            print("dd")
             gs = GameState(pgs,utt)
+            
             f = open('file'+arg+'.txt', 'w')
             f.close()
             process = psutil.Process()
             ant = process.memory_info().rss/(1024*1024) # in bytes 
             ini = time.time()
             for i in range (10000000):
+                
                 f = open('file'+arg+'.txt', 'a')
                 ini0 = time.time()
                 f.write("cont " +str(i)+self.test_aux(gs, utt,True,f))
