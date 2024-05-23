@@ -1,0 +1,17 @@
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/CMakeFiles/MicroRTS_pybind11.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/CMakeFiles/INSTALL.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/CMakeFiles/ALL_BUILD.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/CMakeFiles/ZERO_CHECK.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/pybind11_lib/pybind11/CMakeFiles/INSTALL.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/pybind11_lib/pybind11/CMakeFiles/ALL_BUILD.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/CMakeFiles/MicroRTScpp.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/CMakeFiles/exp2.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/CMakeFiles/INSTALL.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/CMakeFiles/ALL_BUILD.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/Experimental.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/Nightly.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/Continuous.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/NightlyMemoryCheck.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/pugixml-static.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/INSTALL.dir
+C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/external/pugixml-win/pugixml-1.14/CMakeFiles/ALL_BUILD.dir

@@ -1,0 +1,75 @@
+cont 0 win =1 1519
+memo 43.79296875
+
+cont 1 win =1 1519
+memo 43.8046875
+
+cont 2 win =1 1519
+memo 43.8046875
+
+cont 3 win =1 1519
+memo 43.81640625
+
+cont 4 win =1 1519
+memo 43.8203125
+
+cont 5 win =1 1519
+memo 43.8203125
+
+cont 6 win =1 1519
+memo 43.82421875
+
+cont 7 win =1 1519
+memo 43.828125
+
+cont 8 win =1 1519
+memo 43.83203125
+
+cont 9 win =1 1519
+memo 43.8359375
+
+cont 10 win =1 1519
+memo 43.8515625
+
+cont 11 win =1 1519
+memo 43.859375
+
+cont 12 win =1 1519
+memo 43.859375
+
+cont 13 win =1 1519
+memo 43.859375
+
+cont 14 win =1 1519
+memo 43.859375
+
+cont 15 win =1 1519
+memo 43.875
+
+cont 16 win =1 1519
+memo 43.87890625
+
+cont 17 win =1 1519
+memo 43.88671875
+
+cont 18 win =1 1519
+memo 43.88671875
+
+cont 19 win =1 1519
+memo 43.88671875
+
+cont 20 win =1 1519
+memo 43.8984375
+
+cont 21 win =1 1519
+memo 43.90234375
+
+cont 22 win =1 1519
+memo 43.90234375
+
+cont 23 win =1 1519
+memo 43.90234375
+
+cont 24 win =1 1519
+memo 43.91796875
+

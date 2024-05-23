@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\projetos\MicroRTS\bind\pybind11\pybind11.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\projetos\MicroRTS\bind\pybind11\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{AD6DDA42-0D9D-3A8D-A75C-480F6BC2A7C1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

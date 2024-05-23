@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\projetos\MicroRTS\bind\pybind11\build\temp.win-amd64-cpython-311\Release\MicroRTS_pybind11\CMakeFiles\1abef73431aac6bc8922b25ca0b8d83a\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\projetos\MicroRTS\MicroRTS_cpp\external\pugixml-win\pugixml-1.14\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\projetos\MicroRTS\bind\pybind11\build\temp.win-amd64-cpython-311\Release\MicroRTS_pybind11\build\external\pugixml-win\pugixml-1.14\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{01E4D6A1-903D-3ACF-A736-69B65B9979CD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

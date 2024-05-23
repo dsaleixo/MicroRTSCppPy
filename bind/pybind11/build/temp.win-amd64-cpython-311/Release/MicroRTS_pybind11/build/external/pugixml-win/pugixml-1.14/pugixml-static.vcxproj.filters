@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\projetos\MicroRTS\MicroRTS_cpp\external\pugixml-win\pugixml-1.14\src\pugixml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\projetos\MicroRTS\MicroRTS_cpp\external\pugixml-win\pugixml-1.14\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0F260049-65FB-374F-883B-BF6563369634}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

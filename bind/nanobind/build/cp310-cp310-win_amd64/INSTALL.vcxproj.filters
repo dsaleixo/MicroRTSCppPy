@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\projetos\MicroRTS\bind\nanobind\build\cp310-cp310-win_amd64\CMakeFiles\2266422884aef0ab40d3e70bbfc5bacd\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7FC0C844-D255-3253-B5EA-EE5F4BD0E25F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

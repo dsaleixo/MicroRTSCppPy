@@ -1,0 +1,300 @@
+cont 0 win =1 1519
+memo 45793280
+
+cont 1 win =1 2308
+memo 45797376
+
+cont 2 win =1 1595
+memo 45797376
+
+cont 3 win =1 1595
+memo 45801472
+
+cont 4 win =1 1595
+memo 45801472
+
+cont 5 win =1 1595
+memo 45801472
+
+cont 6 win =1 1595
+memo 45801472
+
+cont 7 win =1 1595
+memo 45821952
+
+cont 8 win =1 1608
+memo 45821952
+
+cont 9 win =1 1519
+memo 45821952
+
+cont 10 win =1 1525
+memo 45838336
+
+cont 11 win =1 1860
+memo 45838336
+
+cont 12 win =1 1608
+memo 45850624
+
+cont 13 win =1 1519
+memo 45850624
+
+cont 14 win =1 1525
+memo 45858816
+
+cont 15 win =1 1860
+memo 45871104
+
+cont 16 win =1 1533
+memo 45895680
+
+cont 17 win =1 1749
+memo 45895680
+
+cont 18 win =1 1519
+memo 45895680
+
+cont 19 win =1 1572
+memo 45928448
+
+cont 20 win =1 1525
+memo 45932544
+
+cont 21 win =1 2263
+memo 45932544
+
+cont 22 win =1 2396
+memo 45932544
+
+cont 23 win =0 1346
+memo 45932544
+
+cont 24 win =1 1519
+memo 45932544
+
+cont 25 win =1 1608
+memo 45932544
+
+cont 26 win =1 1519
+memo 45969408
+
+cont 27 win =1 1412
+memo 45977600
+
+cont 28 win =1 1542
+memo 45977600
+
+cont 29 win =1 1519
+memo 45977600
+
+cont 30 win =0 1368
+memo 45977600
+
+cont 31 win =1 1519
+memo 45977600
+
+cont 32 win =0 2698
+memo 45981696
+
+cont 33 win =1 1645
+memo 46014464
+
+cont 34 win =1 1595
+memo 46014464
+
+cont 35 win =1 1645
+memo 46022656
+
+cont 36 win =1 1595
+memo 46022656
+
+cont 37 win =1 1645
+memo 46022656
+
+cont 38 win =1 1595
+memo 46022656
+
+cont 39 win =1 1745
+memo 46055424
+
+cont 40 win =1 2325
+memo 46055424
+
+cont 41 win =1 1519
+memo 46055424
+
+cont 42 win =1 1608
+memo 46055424
+
+cont 43 win =1 1519
+memo 46059520
+
+cont 44 win =1 1525
+memo 46059520
+
+cont 45 win =1 2563
+memo 46129152
+
+cont 46 win =1 1519
+memo 46129152
+
+cont 47 win =-1 3000
+memo 46129152
+
+cont 48 win =1 1519
+memo 46129152
+
+cont 49 win =1 1525
+memo 46129152
+
+cont 50 win =1 2628
+memo 46137344
+
+cont 51 win =1 1519
+memo 46137344
+
+cont 52 win =1 1556
+memo 46137344
+
+cont 53 win =1 1685
+memo 46141440
+
+cont 54 win =1 1519
+memo 46141440
+
+cont 55 win =0 1368
+memo 46141440
+
+cont 56 win =1 1519
+memo 46141440
+
+cont 57 win =0 1542
+memo 46141440
+
+cont 58 win =1 1519
+memo 46206976
+
+cont 59 win =1 1608
+memo 46215168
+
+cont 60 win =1 1519
+memo 46215168
+
+cont 61 win =1 1412
+memo 46215168
+
+cont 62 win =1 1555
+memo 46219264
+
+cont 63 win =1 1572
+memo 46219264
+
+cont 64 win =1 2120
+memo 46219264
+
+cont 65 win =1 1519
+memo 46219264
+
+cont 66 win =1 2120
+memo 46219264
+
+cont 67 win =1 1519
+memo 46219264
+
+cont 68 win =1 1519
+memo 46227456
+
+cont 69 win =0 1563
+memo 46227456
+
+cont 70 win =0 1346
+memo 46227456
+
+cont 71 win =1 1910
+memo 46297088
+
+cont 72 win =1 1519
+memo 46297088
+
+cont 73 win =1 1608
+memo 46297088
+
+cont 74 win =1 2120
+memo 46301184
+
+cont 75 win =0 1346
+memo 46301184
+
+cont 76 win =1 2546
+memo 46309376
+
+cont 77 win =1 1572
+memo 46309376
+
+cont 78 win =1 1525
+memo 46309376
+
+cont 79 win =1 2861
+memo 46309376
+
+cont 80 win =1 1519
+memo 46309376
+
+cont 81 win =0 1346
+memo 46309376
+
+cont 82 win =1 1519
+memo 46309376
+
+cont 83 win =0 1346
+memo 46309376
+
+cont 84 win =1 1945
+memo 46379008
+
+cont 85 win =1 1519
+memo 46383104
+
+cont 86 win =1 1542
+memo 46383104
+
+cont 87 win =1 1519
+memo 46383104
+
+cont 88 win =0 1368
+memo 46383104
+
+cont 89 win =1 2120
+memo 46383104
+
+cont 90 win =1 1542
+memo 46383104
+
+cont 91 win =1 1519
+memo 46383104
+
+cont 92 win =0 1368
+memo 46383104
+
+cont 93 win =1 1519
+memo 46399488
+
+cont 94 win =1 2263
+memo 46399488
+
+cont 95 win =1 2120
+memo 46403584
+
+cont 96 win =0 1346
+memo 46403584
+
+cont 97 win =1 1519
+memo 46403584
+
+cont 98 win =0 1346
+memo 46403584
+
+cont 99 win =1 1519
+memo 46473216
+

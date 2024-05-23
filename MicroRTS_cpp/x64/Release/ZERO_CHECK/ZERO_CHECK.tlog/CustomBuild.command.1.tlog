@@ -1,0 +1,10 @@
+^C:\PROJETOS\MICRORTS\MICRORTS_CPP\CMAKEFILES\F4270A42E0E28FE7089EF3EBB4D8E1AB\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/projetos/MicroRTS/MicroRTS_cpp -BC:/projetos/MicroRTS/MicroRTS_cpp --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/projetos/MicroRTS/MicroRTS_cpp/MicroRTS_CPP.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

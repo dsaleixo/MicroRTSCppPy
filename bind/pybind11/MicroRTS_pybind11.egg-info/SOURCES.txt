@@ -1,0 +1,9 @@
+MicroRTSpy.pyi
+pyproject.toml
+setup.py
+MicroRTS_pybind11.egg-info/PKG-INFO
+MicroRTS_pybind11.egg-info/SOURCES.txt
+MicroRTS_pybind11.egg-info/dependency_links.txt
+MicroRTS_pybind11.egg-info/not-zip-safe
+MicroRTS_pybind11.egg-info/requires.txt
+MicroRTS_pybind11.egg-info/top_level.txt

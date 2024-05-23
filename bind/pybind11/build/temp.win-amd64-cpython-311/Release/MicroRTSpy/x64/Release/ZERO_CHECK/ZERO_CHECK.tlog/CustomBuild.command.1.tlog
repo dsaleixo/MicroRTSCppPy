@@ -1,0 +1,10 @@
+^C:\PROJETOS\MICRORTS\BIND\PYBIND11\BUILD\TEMP.WIN-AMD64-CPYTHON-311\RELEASE\MICRORTSPY\CMAKEFILES\7AB754BACBF99502E3F25744FDD7AD7F\GENERATE.STAMP.RULE
+setlocal
+"C:\Users\Gilmar Aleixo\AppData\Local\Temp\pip-build-env-l5psrfyu\overlay\Lib\site-packages\cmake\data\bin\cmake.exe" -SC:/projetos/MicroRTS/bind/pybind11 -BC:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTSpy --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTSpy/MicroRTS.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

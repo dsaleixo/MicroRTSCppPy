@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\projetos\MicroRTS\bind\pybind11\build\temp.win-amd64-cpython-311\Release\MicroRTS_pybind11\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\projetos\MicroRTS\bind\pybind11\build\lib.win-amd64-cpython-311\MicroRTS_pybind11.cp311-win_amd64.pyd</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\projetos\MicroRTS\bind\pybind11\build\temp.win-amd64-cpython-311\Release\MicroRTS_pybind11\build\Release\exp2.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\projetos\MicroRTS\bind\pybind11\build\temp.win-amd64-cpython-311\Release\MicroRTS_pybind11\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

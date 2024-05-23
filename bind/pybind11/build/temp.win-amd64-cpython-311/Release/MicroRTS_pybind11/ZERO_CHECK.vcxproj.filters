@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\projetos\MicroRTS\bind\pybind11\build\temp.win-amd64-cpython-311\Release\MicroRTS_pybind11\CMakeFiles\f2e4a2ab17dafeeac37bb2dff1e6b333\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{01E4D6A1-903D-3ACF-A736-69B65B9979CD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

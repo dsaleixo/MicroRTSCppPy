@@ -1,0 +1,10 @@
+C:\miniconda3\Lib\site-packages\nanobind\src\nb_internals.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\nb_internals.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\nb_func.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\nb_func.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\nb_type.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\nb_type.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\nb_enum.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\nb_enum.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\nb_ndarray.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\nb_ndarray.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\nb_static_property.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\nb_static_property.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\common.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\common.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\error.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\error.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\trampoline.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\trampoline.obj
+C:\miniconda3\Lib\site-packages\nanobind\src\implicit.cpp;C:\projetos\MicroRTS\bind\nanobind\build\cp311-cp311-win_amd64\nanobind-static.dir\Release\implicit.obj

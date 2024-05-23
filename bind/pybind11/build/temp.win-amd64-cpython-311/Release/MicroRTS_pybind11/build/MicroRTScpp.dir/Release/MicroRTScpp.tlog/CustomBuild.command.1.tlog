@@ -1,0 +1,10 @@
+^C:\PROJETOS\MICRORTS\MICRORTS_CPP\CMAKELISTS.TXT
+setlocal
+"C:\Users\Gilmar Aleixo\AppData\Local\Temp\pip-build-env-lw_mtwh_\overlay\Lib\site-packages\cmake\data\bin\cmake.exe" -SC:/projetos/MicroRTS/bind/pybind11 -BC:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11 --check-stamp-file C:/projetos/MicroRTS/bind/pybind11/build/temp.win-amd64-cpython-311/Release/MicroRTS_pybind11/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

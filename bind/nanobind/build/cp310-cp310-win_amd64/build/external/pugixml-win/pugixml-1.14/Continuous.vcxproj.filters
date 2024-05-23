@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\projetos\MicroRTS\bind\nanobind\build\cp310-cp310-win_amd64\CMakeFiles\95d8699af81a65233c5623c261de3f63\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\projetos\MicroRTS\MicroRTS_cpp\external\pugixml-win\pugixml-1.14\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\projetos\MicroRTS\bind\nanobind\build\cp310-cp310-win_amd64\build\external\pugixml-win\pugixml-1.14\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7FC0C844-D255-3253-B5EA-EE5F4BD0E25F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
