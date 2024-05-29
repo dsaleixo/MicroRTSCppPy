@@ -9,7 +9,7 @@ using namespace  std;
 
 
 PhysicalGameState::PhysicalGameState(const PhysicalGameState& other) {
-    Unit::next_ID = 237;
+    Unit::next_ID = 1237;
     
     this->width = other.width;
     this->height = other.height;

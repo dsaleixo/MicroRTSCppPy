@@ -34,7 +34,7 @@ class Test1:
             
             if g <7: return UnitAction(UnitAction.getTYPE_MOVE(), UnitAction.getDIRECTION_DOWN())
             
-
+            UnitAction.getTYPE
         @staticmethod
         def getAttack(u : Unit, gs : GameState) -> UnitAction:
             a = None

@@ -8,7 +8,7 @@ from MicroRTS_NB  import Unit
 
 if __name__ == '__main__':
     utt = UnitTypeTable(2);
-    #print(utt.VERSION_NON_DETERMINISTIC)
+    print(utt.getMoveConflictResolutionStrategy())
     psg = PhysicalGameState.load("../maps/basesWorkers32x32A.xml",utt);
 
     print("Units0")

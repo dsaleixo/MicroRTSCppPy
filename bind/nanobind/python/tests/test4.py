@@ -35,23 +35,28 @@ class Test4:
             gs = GameState(pgs,utt)
             ai0 = CombatRush(pgs,utt,"Light")
             ai1 = CombatRush(pgs,utt,"Heavy")
-            #screen = ScreenMicroRTS(gs)
+            screen = ScreenMicroRTS(gs)
             cont = 0
-            show = False;
+            show = True;
             inicio = time.time()
             tempo0=0
             tempo1=0
             tempo2=0
             while not gs.gameover() and gs.getTime()<30000:
                
-                #if show :
-                    #screen.draw()
-                    #time.sleep(0.1) 
+                if show :
+                    screen.draw()
+                    time.sleep(0.1) 
+
+           
                 #print("jogador0")
                 inicio = time.time()
                 pa0 = ai0.getActions(gs,0)
                 #print("jogador1")
-            
+                for a in pa0.getActions().values():
+                    print(a[0].toString(), a[1].toString())
+                time.sleep(100) 
+
                 pa1 = ai1.getActions(gs,1)
                 fim = time.time()
                 tempo0+=fim - inicio

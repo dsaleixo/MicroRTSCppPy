@@ -1,28 +1,39 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>5693ae38-9a20-4244-ab84-a686f90dc2a8</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>python.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <ProjectGuid>{35d12492-96e2-4539-aa05-84f1da1ae8e6}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>main.py</StartupFile>
+    <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>python</Name>
-    <RootNamespace>python</RootNamespace>
-    <InterpreterId>
-    </InterpreterId>
-    <TestFramework>Pytest</TestFramework>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|MicroRTS2</InterpreterId>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>true</DebugSymbols>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="file.txt" />
+    <Content Include="file0.txt" />
+    <Content Include="file1.txt" />
+    <Content Include="file2.txt" />
+    <Content Include="file225.txt" />
+    <Content Include="file3.txt" />
+    <Content Include="file4.txt" />
+    <Content Include="file5.txt" />
+    <Content Include="file54.txt" />
+    <Content Include="file6.txt" />
+    <Content Include="file67.txt" />
+    <Content Include="neuralSymbol\model\models\model0.pt" />
+    <Content Include="t0.txt" />
+    <Content Include="t2.txt" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="ai\abstraction\AbstractAction.py" />
     <Compile Include="ai\abstraction\AbstractionLayerAI.py" />
@@ -32,35 +43,52 @@
     <Compile Include="ai\abstraction\Idle.py" />
     <Compile Include="ai\abstraction\Move.py" />
     <Compile Include="ai\abstraction\Train.py" />
+    <Compile Include="ai\abstraction\__init__.py" />
     <Compile Include="ai\rush\CombatRush.py" />
+    <Compile Include="ai\rush\__init__.py" />
+    <Compile Include="ai\__init__.py" />
     <Compile Include="main.py" />
+    <Compile Include="neuralSymbol\model\getInstance0.py" />
+    <Compile Include="neuralSymbol\model\Model0.py" />
+    <Compile Include="neuralSymbol\model\player0.py" />
     <Compile Include="python.py" />
+    <Compile Include="synthesis\ai\Interpreter.py" />
+    <Compile Include="synthesis\ai\Memory.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\c.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\empty.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\for_S.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\node.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\noTerminal.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\S.py" />
+    <Compile Include="synthesis\baseDSL\mainBase\s_s.py" />
+    <Compile Include="synthesis\baseDSL\util\control.py" />
+    <Compile Include="synthesis\baseDSL\util\factory.py" />
     <Compile Include="tests\test.py" />
     <Compile Include="tests\test1.py" />
-    <Compile Include="tests\test3.py" />
     <Compile Include="tests\test2.py" />
+    <Compile Include="tests\test3.py" />
     <Compile Include="tests\test4.py" />
+    <Compile Include="tests\test5.py" />
     <Compile Include="tests\test6.py" />
     <Compile Include="util\screen.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ai\abstraction\" />
-    <Folder Include="ai\rush\" />
-    <Folder Include="maps\" />
-    <Folder Include="ai\" />
-    <Folder Include="util\" />
-    <Folder Include="tests\" />
+    <Folder Include="ai" />
+    <Folder Include="ai\abstraction" />
+    <Folder Include="ai\rush" />
+    <Folder Include="neuralSymbol\" />
+    <Folder Include="neuralSymbol\model" />
+    <Folder Include="neuralSymbol\model\models\" />
+    <Folder Include="synthesis\" />
+    <Folder Include="synthesis\ai" />
+    <Folder Include="synthesis\baseDSL\" />
+    <Folder Include="synthesis\baseDSL\mainBase" />
+    <Folder Include="synthesis\baseDSL\util" />
+    <Folder Include="tests" />
+    <Folder Include="util" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="tests\test5.py" />
+    <InterpreterReference Include="CondaEnv|CondaEnv|MicroRTS2" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
-  <!-- Uncomment the CoreCompile target to enable the Build command in
-       Visual Studio and specify your pre- and post-build commands in
-       the BeforeBuild and AfterBuild targets below. -->
-  <!--<Target Name="CoreCompile" />-->
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
 </Project>
