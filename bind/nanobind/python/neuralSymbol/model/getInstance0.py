@@ -4,9 +4,14 @@ import torch
 #from ai.evaluation import SimpleSqrtEvaluationFunction3
 #from  ai.mcts.naivemcts import NaiveMCTS
 #from ai.abstraction import HeavyRush
-from MicroRTS_NB import UnitAction;
+from MicroRTS_NB import PhysicalGameState, UnitAction, UnitTypeTable;
 from MicroRTS_NB import Unit;
 from MicroRTS_NB import GameState
+
+from ai.rush.CombatRush import CombatRush
+from util.screen import ScreenMicroRTS
+
+import time
 
 class GetInstance0():
     
@@ -77,41 +82,56 @@ class GetInstance0():
     def generate(): # -> (torch.Tensor, torch.Tensor): 
         input = []
         output = []
-        path = "maps/newMaps/map0.xml"
+        map = "./maps/map0.xml"
         max_tick = 3000
-        show_scream = False
-        mch = Match(path, show_scream)
-        ai0 =  NaiveMCTS(100, -1, 100,10,0.3, 1.0, 0.0, 1.0, 0.4, 1.0,  RandomBiasedAI(),  SimpleSqrtEvaluationFunction3(),False)
+        show_scream = True
+      
+        utt = UnitTypeTable(2);
+        pgs = PhysicalGameState.load(map,utt)
+        gs = GameState(pgs,utt)
+        ai0 =  CombatRush(pgs,utt,"Ranged")
+        ai1 = CombatRush(pgs,utt,"Heavy")
         
-        ai1 = HeavyRush(mch.getUTT())
-        
-        ai0.reset(mch.getUTT())
-        ai1.reset(mch.getUTT())
+        screen = ScreenMicroRTS(gs)
+        cont = 0
+        show = True;
         
         gameover = False
         
-        while (not gameover) and mch.getGS().getTime()<max_tick:
-            pa0= ai0.getAction(0, mch.getGS())
-            pa1 =ai1.getAction(1, mch.getGS())
-            for ua in pa0.getActions():
-                aa =int(GetInstance0.getAction(ua.m_a,ua.m_b))
-                input.append(GetInstance0.StateToInput(mch.getGS()))
+        while (not gs.gameover()) and gs.getTime()<max_tick:
+            
+            if show :
+                    screen.draw()
+                    time.sleep(0.1) 
+
+            pa0 = ai0.getActions(gs,0)
+            pa1 = ai1.getActions(gs,1)
+            for ua in pa0.getActions().values():
+                print(ua[0].toString(), ua[1].toString())
+                aa =int(GetInstance0.getAction(ua[0],ua[1]))
+                input.append(GetInstance0.StateToInput(gs))
                 
                 output.append(aa)
-                
-            mch.SetActions(pa0)
-            mch.SetActions(pa1)
-            gameover = mch.run()
-        mch.run()
+            show = gs.updateScream()
+            gs.issueSafe(pa0)
+            gs.issueSafe(pa1)
+            gs.cycle()
+        if show :
+            screen.draw()
+            time.sleep(0.1) 
+        
         inp = torch.stack(input)
         
         out = torch.Tensor(output)
         out = out.to(torch.long)
+        print("ee")
+        print(inp.shape,out.shape)
         return inp, out
     @staticmethod
     def test():
-        input, output = GetInstance0.generate()   
-        print(input.shape,output.shape)
+        inp, output = GetInstance0.generate()   
+        print("ee")
+        print(inp.shape,output.shape)
         
     
         

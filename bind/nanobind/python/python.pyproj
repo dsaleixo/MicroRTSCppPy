@@ -48,9 +48,11 @@
     <Compile Include="ai\rush\__init__.py" />
     <Compile Include="ai\__init__.py" />
     <Compile Include="main.py" />
+    <Compile Include="neuralSymbol\model\dataset0.py" />
     <Compile Include="neuralSymbol\model\getInstance0.py" />
     <Compile Include="neuralSymbol\model\Model0.py" />
     <Compile Include="neuralSymbol\model\player0.py" />
+    <Compile Include="neuralSymbol\model\trainer0.py" />
     <Compile Include="python.py" />
     <Compile Include="synthesis\ai\Interpreter.py" />
     <Compile Include="synthesis\ai\Memory.py" />

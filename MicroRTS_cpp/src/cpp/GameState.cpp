@@ -10,10 +10,10 @@
 GameState::~GameState() {
    
     this->unitActions.clear();
-
+ 
     for (int i = 0; i < this->pgs->getWidth(); i++) delete[] this->_free[i];
     delete this->_free;
-   
+    
     //if (this->pgs != NULL) delete this->pgs;
     
     this->pgs = nullptr;

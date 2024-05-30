@@ -18,7 +18,7 @@ class Player0:
     
     def __init__(self):
         self.model = Model0()
-        self.model.load_state_dict(torch.load("./neuralSymbol/model/models/model0.pt"))
+        self.model.load_state_dict(torch.load("./neuralSymbol/model/models/model1.pt"))
         
     def crateAction(self,i :int, u : Unit)->UnitAction:
         if i==0:
