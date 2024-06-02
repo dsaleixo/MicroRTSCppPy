@@ -18,7 +18,7 @@ from MicroRTS_NB import PhysicalGameState
 from synthesis.ai.Interpreter import Interpreter
 from MicroRTS_NB import Unit
 from MicroRTS_NB import GameState
-from synthesis.baseDSL.mainBase.Node import Node
+from synthesis.baseDSL.mainBase.node import Node
 from synthesis.baseDSL.util.control import Control
 
 

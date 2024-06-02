@@ -8,7 +8,7 @@ from MicroRTS_NB import GameState
 from MicroRTS_NB import PlayerAction
 from MicroRTS_NB import UnitAction
 from MicroRTS_NB import Unit
-from MicroRTSpy import UnitActionAssignment
+from MicroRTS_NB import UnitActionAssignment
 
 
 import random

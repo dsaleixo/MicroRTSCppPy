@@ -4,7 +4,7 @@ from __future__  import annotations
 from typing import TYPE_CHECKING
 
 from synthesis.ai.Interpreter import Interpreter
-from synthesis.baseDSL.mainBase.Node import Node
+from synthesis.baseDSL.mainBase.node import Node
 from synthesis.baseDSL.mainBase.S import S, ChildS
 from synthesis.baseDSL.util.control import Control
 

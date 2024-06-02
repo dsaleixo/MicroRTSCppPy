@@ -8,7 +8,7 @@ from synthesis.baseDSL.util.control import Control
 
 
 if TYPE_CHECKING:
-    from synthesis.baseDSL.mainBase.Node import Node
+    from synthesis.baseDSL.mainBase.node import Node
     from synthesis.baseDSL.mainBase.noTerminal import NoTerminal
     from synthesis.baseDSL.util.factory import Factory
     from synthesis.ai.Interpreter import Interpreter

@@ -8,7 +8,7 @@ from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:
-    from synthesis.baseDSL.mainBase.Node import Node
+    from synthesis.baseDSL.mainBase.node import Node
     from synthesis.baseDSL.util.factory import Factory
 
 

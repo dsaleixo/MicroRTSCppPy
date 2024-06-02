@@ -2,35 +2,35 @@ from __future__  import annotations
 
 
 from typing import TYPE_CHECKING
-'''
-from synthesis.baseDSL.baseMain.empty import Empty
 
-from synthesis.baseDSL.baseMain.S_S import S_S
+from synthesis.baseDSL.mainBase.empty import Empty
+
+from synthesis.baseDSL.mainBase.s_s import S_S
 
 if TYPE_CHECKING:
     from synthesis.baseDSL.almostTerminal.direction import Direction
     from synthesis.baseDSL.almostTerminal.targetPlayer import TargetPlayer
     from synthesis.baseDSL.almostTerminal.utype import Utype
     from synthesis.baseDSL.almostTerminal.n import N
-    from synthesis.baseDSL.baseAction.build import Build
-    from synthesis.baseDSL.baseAction.harvest import Harvest
+    from synthesis.baseDSL.actionBase.build import Build
+    from synthesis.baseDSL.actionBase.harvest import Harvest
 
-    from synthesis.baseDSL.baseAction.idle import Idle
-    from synthesis.baseDSL.baseAction.moveAway import MoveAway
-    from synthesis.baseDSL.baseAction.moveToUnit import MoveToUnit
-    from synthesis.baseDSL.baseAction.train import Train
+    from synthesis.baseDSL.actionBase.idle import Idle
+    from synthesis.baseDSL.actionBase.moveAway import MoveAway
+    from synthesis.baseDSL.actionBase.moveToUnit import MoveToUnit
+    from synthesis.baseDSL.actionBase.train import Train
     
     from synthesis.baseDSL.almostTerminal.opponentPolicy import OpponentPolicy
-    from synthesis.baseDSL.baseAction.attack import Attack
-    from synthesis.baseDSL.baseMain.S import S, ChildS
-    from synthesis.baseDSL.baseMain.for_S import For_S
-    from synthesis.baseDSL.baseMain.C import C, ChildC
-'''
+    from synthesis.baseDSL.actionBase.attack import Attack
+    from synthesis.baseDSL.mainBase.S import S, ChildS
+    from synthesis.baseDSL.mainBase.for_S import For_S
+    from synthesis.baseDSL.mainBase.c import C, ChildC
+
 from abc import ABC, abstractmethod
 
 class Factory(ABC):
     
-    '''
+    
     def build_S(self,childS : ChildS = None) -> S:
         raise Exception('Unimplemented method: build_S')
     
@@ -105,4 +105,4 @@ class Factory(ABC):
     def build_OpponentPolicy(self,value : str= None) -> OpponentPolicy:
         raise Exception('Unimplemented method: Direction')
     
-    '''
+    
