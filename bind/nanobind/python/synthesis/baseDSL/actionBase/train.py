@@ -1,3 +1,5 @@
+from MicroRTS_NB import GameState, Unit
+from synthesis.ai.Interpreter import Interpreter
 from synthesis.baseDSL.mainBase.c import C, ChildC
 from synthesis.baseDSL.mainBase.node import Node
 from synthesis.baseDSL.almostTerminal.utype import Utype
@@ -38,25 +40,25 @@ class Train(ChildC,Node):
     
     
     def interpret(self,gs : GameState, player:int, u : Unit, automata :Interpreter) -> None:
-        uType = automata._utt.getUnitType(self._type.getValue())
+        uType = automata._utt.getUnitTypeString(self._type.getValue())
 		
    
-        if  u.getPlayer() == player and u.getType().name.equals("Base")  and uType.name=="Worker" and automata._memory._freeUnit[u.getID()]  :
+        if  u.getPlayer() == player and u.getType().getName()=="Base"  and uType.getName()=="Worker" and automata._memory._freeUnit[u.getID()]  :
                             
             
-            if automata.resource >= uType.cost and automata.countTrain(uType.name,player,gs) < int(self._n.getValue())  :
+            if automata.resource >= uType.getCost() and automata.countTrain(uType.getName(),player,gs) < int(self._n.getValue())  :
                 automata._core.train(u, uType,self._direc.converte(gs,player,u))
-                automata.resource -= uType.cost
+                automata.resource -= uType.getCost()
                 self._used = True
                 automata._memory._freeUnit[u.getID()] = False
                
 	
-        if  u.getPlayer() == player and u.getType().name == "Barracks"  and \
-                            (uType.name=="Light"  or uType.name.equals("Heavy")  or uType.name=="Ranged") and automata._core.getAbstractAction(u)==None :
+        if  u.getPlayer() == player and u.getType().getName() == "Barracks"  and \
+                            (uType.getName()=="Light"  or uType.getName() == ("Heavy")  or uType.getName()=="Ranged") and automata._core.getAbstractAction(u)==None :
             
-            if automata.resource >= uType.cost and automata.countTrain(uType.name,player,gs) < int(self._n.getValue())  :                                     
+            if automata.resource >= uType.getCost() and automata.countTrain(uType.getName(),player,gs) < int(self._n.getValue())  :                                     
                 automata._core.train(u, uType,self._direc.converte(gs,player,u))
-                automata.resource -= uType.cost
+                automata.resource -= uType.getCost()
                 self._used = True
                 automata._memory._freeUnit[u.getID()] = False
 	     

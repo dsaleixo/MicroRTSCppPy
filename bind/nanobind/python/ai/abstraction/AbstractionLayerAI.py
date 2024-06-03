@@ -34,7 +34,9 @@ class AbstractionLayerAI:
         
     def resert(self):
         self._actions.clear()
-        
+      
+    def clear(self):
+        self._actions.clear()
 
     def translateActions(self, player : int,  gs : GameState) :
         pgs = gs.getPhysicalGameState()

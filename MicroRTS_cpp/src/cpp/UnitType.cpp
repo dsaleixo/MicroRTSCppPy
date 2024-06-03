@@ -22,6 +22,10 @@ using namespace std;
         return this->isStockpile;
     }
 
+    int UnitType::getCost() {
+        return this->cost;
+    }
+
     UnitType::UnitType() {
     ;
     }

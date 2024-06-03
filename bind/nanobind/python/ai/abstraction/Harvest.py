@@ -70,11 +70,12 @@ class Harvest(AbstractAction):
             if self._target.getX() == self._unit.getX()-1 and self._target.getY() == self._unit.getY():
                 return  UnitAction(UnitAction.getTYPE_HARVEST(),UnitAction.getDIRECTION_LEFT());
         else :
-       
+           
             # return resources:
             #          System.out.println("findPathToAdjacentPosition from Return: (" + target.getX() + "," + target.getY() + ")");
             move = self._pf.findPathToAdjacentPosition(self._unit, self._base.getX()+self._base.getY()*gs.getPhysicalGameState().getWidth(), gs);
             if move.getType()!=UnitAction.getTYPE_NONE():
+           
                 if gs.isUnitActionAllowed(self._unit, move):
                     return move;
                 return None;

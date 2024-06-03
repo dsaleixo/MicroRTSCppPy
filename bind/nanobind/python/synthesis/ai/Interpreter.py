@@ -1,5 +1,11 @@
 from __future__  import annotations
 from typing import TYPE_CHECKING
+from ai.abstraction.Build import Build
+from ai.abstraction.Harvest import Harvest
+from ai.abstraction.Train import Train
+
+from synthesis.ai.Memory import Memory
+
 
 
 
@@ -9,7 +15,7 @@ from typing import TYPE_CHECKING
 
 
 if TYPE_CHECKING:
-   from synthesis.baseDSL.mainBase.Node import Node
+   from synthesis.baseDSL.mainBase.node import Node
 
 
 from MicroRTS_NB  import UnitType, UnitTypeTable
@@ -26,37 +32,36 @@ from ai.abstraction.AbstractionLayerAI import AbstractionLayerAI
 
 class Interpreter:
     
-    def __init__(self,utt : UnitTypeTable, n : Node) -> None:
+    def __init__(self,pgs : PhysicalGameState, utt : UnitTypeTable, n : Node) -> None:
         self._n : Node = n
         self._utt : UnitTypeTable = utt
-        self._core  : AbstractionLayerAI= AbstractionLayerAI(utt)
+        self._core  : AbstractionLayerAI= AbstractionLayerAI(pgs)
         self.resource :int = None
-        self.workerType : UnitType = utt.getUnitType("Worker")
-        self.baseType : UnitType= utt.getUnitType("Base")
-        self.barracksType : UnitType = utt.getUnitType("Barracks")
-        self.rangedType : UnitType = utt.getUnitType("Ranged")
+        self.workerType : UnitType = utt.getUnitTypeString("Worker")
+        self.baseType : UnitType= utt.getUnitTypeString("Base")
+        self.barracksType : UnitType = utt.getUnitTypeString("Barracks")
+        self.rangedType : UnitType = utt.getUnitTypeString("Ranged")
         
 
         
-    def reset(self,utt : UnitTypeTable):
-        self._utt = utt
-        self._core = AbstractionLayerAI(utt)
-        self.workerType = utt.getUnitType("Worker")
-        self.baseType = utt.getUnitType("Base")
-        self.barracksType = utt.getUnitType("Barracks")
-        self.rangedType = utt.getUnitType("Ranged")
+    def resert(self):
+        pass
         
-    def getAction(self, player:int,  gs:GameState) -> PlayerAction:
+    def getActions(self,  gs:GameState, player:int) -> PlayerAction:
         self.resource = gs.getPlayer(player).getResources()
-        #self._core.clear()
-        #self._memory = Memory(gs,self)
+        self._core.clear()
+        self._memory = Memory(gs,player,self)
         self._n.interpret(gs, player,None, self)
-        return self._core.translateActions(player, gs)
+        pa = self._core.translateActions(player, gs)
+        #print(gs.getTime())
+        #for a in pa.getActions().values():
+        #    print(a[0].toString(),a[1].toString())
+        return pa
         
         
         
         
-    '''    
+       
     def  farthestAllyBase(self, pgs: PhysicalGameState, player: int,  unitAlly : Unit) ->Unit :
 
         farthestBase = None
@@ -78,10 +83,10 @@ class Interpreter:
         cont =0
     	
     	
-        for  u2 in pgs.getUnits():
-            if   u2.getPlayer() == player :
+        for  u2 in pgs.getUnits(player).values():
+       
                 a2 = self._core.getAbstractAction(u2)
-                if isinstance(a2 , ai.abstraction.Harvest) :
+                if isinstance(a2 , Harvest) :
                     cont+=1
 
         return cont
@@ -92,25 +97,25 @@ class Interpreter:
     def countUnit(self,type, player:int,  gs:GameState):
         count =0
         pgs = gs.getPhysicalGameState()
-        for u2 in pgs.getUnits():
-            if u2.getPlayer()==player and u2.getType().name == type:
+        for u2 in pgs.getUnits(player).values():
+            if  u2.getType().getName() == type:
                 count+=1
         return count
     
     def countConstrution(self,typeU, player:int,  gs:GameState):
         cont=0
         pgs = gs.getPhysicalGameState()
-        for u2 in pgs.getUnits():
-            if u2.getPlayer()==player:
-                if u2.getType().name == typeU:
+        for u2 in pgs.getUnits(player).values():
+          
+                if u2.getType().getName() == typeU:
                     cont+=1
-                elif u2.getType().name == "Worker":
+                elif u2.getType().getName() == "Worker":
                     a2 = self._core.getAbstractAction(u2)
                     aux=False
                     
-                    if  isinstance(a2,ai.abstraction.Build)  :
+                    if  isinstance(a2,Build)  :
                         
-                        if a2.type.name==typeU:
+                        if a2._type.getName()==typeU:
                             aux=True	
                     if aux:
                         cont+=1
@@ -121,17 +126,17 @@ class Interpreter:
     def countTrain(self,typeU, player:int,  gs:GameState):
         cont=0
         pgs = gs.getPhysicalGameState()
-        for u2 in pgs.getUnits():
-            if u2.getPlayer()==player:
-                if u2.getType().name == typeU:
+        for u2 in pgs.getUnits(player).values():
+           
+                if u2.getType().getName() == typeU:
                     cont+=1
-                elif u2.getType().name == "Barracks" or u2.getType().name == "Base":
+                elif u2.getType().getName() == "Barracks" or u2.getType().getName() == "Base":
                     a2 = self._core.getAbstractAction(u2)
                     aux=False
                     
-                    if  isinstance(a2,ai.abstraction.Train)  :
+                    if  isinstance(a2,Train)  :
                         
-                        if a2.type.name==typeU:
+                        if a2.type.getName()==typeU:
                             aux=True
                             
                             	
@@ -144,8 +149,8 @@ class Interpreter:
         pgs = gs.getPhysicalGameState()
         closestEnemy = None
         closestDistance = 0
-        for  u2 in pgs.getUnits():
-            if u2.getPlayer() >= 0 and u2.getPlayer() != p.getID() and u.getID() != u2.getID() :
+        for  u2 in pgs.getUnits(1-p.getID()).values():
+            if u.getID() != u2.getID() :
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestEnemy == None or d < closestDistance:
                     closestEnemy = u2
@@ -157,8 +162,8 @@ class Interpreter:
         pgs = gs.getPhysicalGameState()
         FarthestEnemy = None
         FarthestDistance = 1000000
-        for u2 in pgs.getUnits():
-            if u2.getPlayer() >= 0 and u2.getPlayer() != p.getID() and u.getID() != u2.getID():
+        for u2 in pgs.getUnits(1-p.getID()).values():
+            if  u.getID() != u2.getID():
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if FarthestEnemy == None or d > FarthestDistance:
                     FarthestEnemy = u2
@@ -172,8 +177,8 @@ class Interpreter:
         closestDistance = 0
         Healthy = 10000
         
-        for   u2 in pgs.getUnits():
-            if u2.getPlayer() >= 0 and u2.getPlayer() != p.getID() and u.getID() != u2.getID():
+        for   u2 in pgs.getUnits(1-p.getID()).values():
+            if  u.getID() != u2.getID():
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestHealthy == None  or  Healthy > u2.getMaxHitPoints():
                     Healthy = u2.getMaxHitPoints()
@@ -196,8 +201,8 @@ class Interpreter:
         Strongest = -1
         
         
-        for  u2 in pgs.getUnits():
-            if u2.getPlayer() >= 0 and u2.getPlayer() != p.getID() and u.getID() != u2.getID():
+        for  u2 in pgs.getUnits(1-p.getID()).values():
+            if  u.getID() != u2.getID():
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestStrongest == None or Strongest < u2.getMaxDamage():
                     Strongest = u2.getMaxDamage()
@@ -223,8 +228,8 @@ class Interpreter:
         closestDistance = 0
         Healthy = 0
     
-        for  u2 in pgs.getUnits() :
-            if u2.getPlayer() >= 0 and u2.getPlayer() != p.getID() and u.getID() != u2.getID():
+        for  u2 in pgs.getUnits(1-p.getID()).values() :
+            if u.getID() != u2.getID():
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestHealthy == None or Healthy < u2.getMaxHitPoints():
                     Healthy = u2.getMaxHitPoints()
@@ -246,8 +251,8 @@ class Interpreter:
         Weakest = 10000
         
         
-        for  u2 in pgs.getUnits(): 
-            if u2.getPlayer() >= 0 and u2.getPlayer() != p.getID() and u.getID() != u2.getID():
+        for  u2 in pgs.getUnits(1-p.getID()).values(): 
+            if u.getID() != u2.getID():
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestWeakest == None or Weakest > u2.getMaxDamage():
                     Weakest = u2.getMaxDamage()
@@ -271,11 +276,11 @@ class Interpreter:
         
         nBr = self.countConstrution("Barracks",player,gs)
         p = gs.getPlayer(player)
-        reservedPositions = java.util.LinkedList()
+        reservedPositions = []
         pgs = gs.getPhysicalGameState()
         
         if self._core.getAbstractAction(u)==None and nBr <1:
             r = self._core.buildIfNotAlreadyBuilding(u,self.barracksType,u.getX(),u.getY(),reservedPositions,p,pgs)
             
         
-   '''
+  

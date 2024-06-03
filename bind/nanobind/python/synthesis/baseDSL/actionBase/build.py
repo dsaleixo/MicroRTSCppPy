@@ -37,23 +37,23 @@ class Build(ChildC,Node):
     def interpret(self,gs : GameState, player:int, u : Unit, automata :Interpreter) -> None:
         pgs = gs.getPhysicalGameState()
         p = gs.getPlayer(player)
-        uType = automata._utt.getUnitType(self._type.getValue())
+        uType = automata._utt.getUnitTypeString(self._type.getValue())
         
         if not automata._memory._freeUnit[u.getID()] :
             return
          
-        if not (uType.name == "Barracks" or uType.name == "Base" ):
+        if not (uType.getName() == "Barracks" or uType.getName() == "Base" ):
             return
         
         if u.getPlayer() != player or \
-                    u.getType().name != "Worker" or \
-                    automata.resource < uType.cost    :
+                    u.getType().getName() != "Worker" or \
+                    automata.resource < uType.getCost()    :
             return
         
-        if automata.countConstrution(uType.name,player,gs) >= int(self._n.getValue()):
+        if automata.countConstrution(uType.getName(),player,gs) >= int(self._n.getValue()):
             return 
         
-        reservedPositions =  java.util.LinkedList()
+        reservedPositions =  []
 	
       
         direction = self._direc.converte(gs, player,u)
@@ -62,10 +62,10 @@ class Build(ChildC,Node):
         elif direction==UnitAction.getDIRECTION_LEFT(): automata._core.build(u,uType,u.getX()-1,u.getY())
         elif direction==UnitAction.getDIRECTION_RIGHT(): automata._core.build(u,uType,u.getX()+1,u.getY())
         
-        else: automata._core.buildIfNotAlreadyBuilding(u,uType,u.getX(),u.getY(),reservedPositions,p,pgs)
+        else: automata._core.buildIfNotAlreadyBuilding(u,uType,u.getX(),u.getY(),reservedPositions,p,gs)
         
         self._used= True
-        automata.resource -= uType.cost
+        automata.resource -= uType.getCost()
         automata._memory._freeUnit[u.getID()] = False
         
         

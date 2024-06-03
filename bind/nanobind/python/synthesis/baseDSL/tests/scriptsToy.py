@@ -6,17 +6,18 @@ from synthesis.baseDSL.almostTerminal.n import N
 from synthesis.baseDSL.almostTerminal.opponentPolicy import OpponentPolicy
 from synthesis.baseDSL.almostTerminal.targetPlayer import TargetPlayer
 from synthesis.baseDSL.almostTerminal.utype import Utype
-from synthesis.baseDSL.baseAction.attack import Attack
-from synthesis.baseDSL.baseAction.build import Build
-from synthesis.baseDSL.baseAction.harvest import Harvest
-from synthesis.baseDSL.baseAction.idle import Idle
-from synthesis.baseDSL.baseAction.moveToUnit import MoveToUnit
-from synthesis.baseDSL.baseAction.train import Train
-from synthesis.baseDSL.baseMain.C import C
-from synthesis.baseDSL.baseMain.S import S
-from synthesis.baseDSL.baseMain.S_S import S_S
-from synthesis.baseDSL.baseMain.for_S import For_S
-from synthesis.baseDSL.baseMain.node import Node
+from synthesis.baseDSL.actionBase.attack import Attack
+from synthesis.baseDSL.actionBase.build import Build
+from synthesis.baseDSL.actionBase.harvest import Harvest
+from synthesis.baseDSL.actionBase.idle import Idle
+from synthesis.baseDSL.actionBase.moveToUnit import MoveToUnit
+from synthesis.baseDSL.actionBase.train import Train
+from synthesis.baseDSL.mainBase.c import C
+from synthesis.baseDSL.mainBase.S import S
+from synthesis.baseDSL.mainBase.empty import Empty
+from synthesis.baseDSL.mainBase.s_s import S_S
+from synthesis.baseDSL.mainBase.for_S import For_S
+from synthesis.baseDSL.mainBase.node import Node
 
 
 class ScriptsToy(object):
@@ -24,8 +25,13 @@ class ScriptsToy(object):
         pass
     
     @staticmethod
+    def scriptEmpty() ->Node:
+        emp  = Empty()
+        return S(emp)
+
+    @staticmethod
     def script0() ->Node:
-        op = OpponentPolicy("Farthest")
+        op = OpponentPolicy("LessHealthy")
         attack = Attack(op)
         c = C(attack)
         for_s = For_S(S(c))

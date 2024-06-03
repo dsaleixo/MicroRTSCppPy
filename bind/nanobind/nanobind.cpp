@@ -41,6 +41,7 @@ NB_MODULE(MicroRTS_NB, m) {
 	 nb::class_<UnitType>(m, "UnitType")
         .def("equals", &UnitType::equals)
         .def("getName", &UnitType::getName)
+         .def("getCost", &UnitType::getCost)
         .def("getIsStockpile", &UnitType::getIsStockpile)
         .def("getCanMove", &UnitType::getCanMove)
         .def("getCanAttack", &UnitType::getCanAttack)

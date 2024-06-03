@@ -35,7 +35,7 @@ class Attack(ChildC,Node):
     
     def interpret(self,gs : GameState, player:int, u : Unit, automata :Interpreter) -> None:
         p = gs.getPlayer(player)
-        if (not u.getType().canAttack) or u.getPlayer() != player :
+        if (not u.getType().getCanAttack()) or u.getPlayer() != player :
             return 
 	    
         if  automata._memory._freeUnit[u.getID()] :

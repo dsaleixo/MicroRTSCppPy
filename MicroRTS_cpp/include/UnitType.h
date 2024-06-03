@@ -121,6 +121,7 @@ public:
          bool getCanAttack();
          bool getcanHarvest();
          bool getisResource();
+         int getCost();
         /* (non-Javadoc)
          * @see java.lang.Object#equals(java.lang.Object)
          */

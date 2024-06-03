@@ -40,12 +40,12 @@ class MoveToUnit(ChildC,Node):
         p = gs.getPlayer(jogador)
         pgs = gs.getPhysicalGameState() 
 		
-        if u.getType().canMove and u.getPlayer()==player and \
+        if u.getType().getCanMove() and u.getPlayer()==player and \
                             automata._memory._freeUnit[u.getID()] :
             u2 = self._op.getUnit(gs, p, u, automata)
             if u2!=None :
-                pf =  automata._core.pf   
-                move = pf.findPathToPositionInRange2(u, u2.getX() + u2.getY() * pgs.getWidth(),1, gs )
+                pf =  automata._core._pf   
+                move = pf.findPathToPositionInRange(u, u2.getX() + u2.getY() * pgs.getWidth(),1, gs )
                 if move!=None:
                     automata._core.move(u, move.m_a, move.m_b)
                     self._used = True

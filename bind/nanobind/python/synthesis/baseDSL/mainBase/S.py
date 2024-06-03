@@ -5,8 +5,8 @@ from typing import TYPE_CHECKING
 
 from synthesis.baseDSL.util.control import Control
 
-
-
+from synthesis.baseDSL.mainBase.node import Node
+from synthesis.baseDSL.mainBase.noTerminal import NoTerminal
 if TYPE_CHECKING:
     from synthesis.baseDSL.mainBase.node import Node
     from synthesis.baseDSL.mainBase.noTerminal import NoTerminal

@@ -47,7 +47,7 @@ class For_S(ChildS,Node):
     
     def interpret(self,gs : GameState, player:int, u : Unit, automata :Interpreter) -> None:
         pgs = gs.getPhysicalGameState()
-        for u2 in pgs.getUnits():	
+        for u2 in pgs.getUnits(player).values():	
             if u2.getPlayer()==player and automata._core.getAbstractAction(u2)==None :
                 self._s.interpret(gs, player,u2, automata)
    

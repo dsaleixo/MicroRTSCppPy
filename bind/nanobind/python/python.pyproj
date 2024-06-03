@@ -12,6 +12,7 @@
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId>CondaEnv|CondaEnv|MicroRTS2</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -48,14 +49,30 @@
     <Compile Include="ai\rush\__init__.py" />
     <Compile Include="ai\__init__.py" />
     <Compile Include="main.py" />
+    <Compile Include="mainDavid.py" />
     <Compile Include="neuralSymbol\model\dataset0.py" />
     <Compile Include="neuralSymbol\model\getInstance0.py" />
     <Compile Include="neuralSymbol\model\Model0.py" />
     <Compile Include="neuralSymbol\model\player0.py" />
     <Compile Include="neuralSymbol\model\trainer0.py" />
+    <Compile Include="playout\simpleMatch.py" />
+    <Compile Include="playout\tests\test0.py" />
     <Compile Include="python.py" />
     <Compile Include="synthesis\ai\Interpreter.py" />
     <Compile Include="synthesis\ai\Memory.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\attack.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\build.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\harvest.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\idle.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\moveAway.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\moveToUnit.py" />
+    <Compile Include="synthesis\baseDSL\actionBase\train.py" />
+    <Compile Include="synthesis\baseDSL\almostTerminal\almostTerminal.py" />
+    <Compile Include="synthesis\baseDSL\almostTerminal\direction.py" />
+    <Compile Include="synthesis\baseDSL\almostTerminal\n.py" />
+    <Compile Include="synthesis\baseDSL\almostTerminal\opponentPolicy.py" />
+    <Compile Include="synthesis\baseDSL\almostTerminal\targetPlayer.py" />
+    <Compile Include="synthesis\baseDSL\almostTerminal\utype.py" />
     <Compile Include="synthesis\baseDSL\mainBase\c.py" />
     <Compile Include="synthesis\baseDSL\mainBase\empty.py" />
     <Compile Include="synthesis\baseDSL\mainBase\for_S.py" />
@@ -63,8 +80,11 @@
     <Compile Include="synthesis\baseDSL\mainBase\noTerminal.py" />
     <Compile Include="synthesis\baseDSL\mainBase\S.py" />
     <Compile Include="synthesis\baseDSL\mainBase\s_s.py" />
+    <Compile Include="synthesis\baseDSL\tests\scriptsTests.py" />
+    <Compile Include="synthesis\baseDSL\tests\scriptsToy.py" />
     <Compile Include="synthesis\baseDSL\util\control.py" />
     <Compile Include="synthesis\baseDSL\util\factory.py" />
+    <Compile Include="synthesis\baseDSL\util\factory_Base.py" />
     <Compile Include="tests\test.py" />
     <Compile Include="tests\test1.py" />
     <Compile Include="tests\test2.py" />
@@ -81,10 +101,16 @@
     <Folder Include="neuralSymbol\" />
     <Folder Include="neuralSymbol\model" />
     <Folder Include="neuralSymbol\model\models\" />
+    <Folder Include="playout\" />
+    <Folder Include="playout\tests\" />
     <Folder Include="synthesis\" />
     <Folder Include="synthesis\ai" />
     <Folder Include="synthesis\baseDSL\" />
     <Folder Include="synthesis\baseDSL\mainBase" />
+    <Folder Include="synthesis\baseDSL\actionBase\" />
+    <Folder Include="synthesis\baseDSL\almostTerminal\" />
+    <Folder Include="synthesis\baseDSL\conditionBase\" />
+    <Folder Include="synthesis\baseDSL\tests\" />
     <Folder Include="synthesis\baseDSL\util" />
     <Folder Include="tests" />
     <Folder Include="util" />

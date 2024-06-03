@@ -40,7 +40,7 @@ class Harvest(ChildC,Node):
         pgs = gs.getPhysicalGameState()
         p = gs.getPlayer(player)
 		
-        if  (not u.getType().canHarvest) or \
+        if  (not u.getType().getcanHarvest()) or \
                     u.getPlayer() != player or  not automata._memory._freeUnit[u.getID()] :
             return
 		
@@ -50,16 +50,16 @@ class Harvest(ChildC,Node):
         closestBase = None
         closestResource = None
         closestDistance = 0
-        for  u2 in pgs.getUnits():
-            if u2.getType().isResource:
+        for  u2 in pgs.getUnits(-1).values():
+            
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestResource == None or d < closestDistance: 
                     closestResource = u2
                     closestDistance = d
            
         closestDistance = 0
-        for u2 in pgs.getUnits() :
-            if u2.getType().isStockpile and u2.getPlayer()==p.getID():
+        for u2 in pgs.getUnits(p.getID()).values() :
+            if u2.getType().getIsStockpile() :
                 d = abs(u2.getX() - u.getX()) + abs(u2.getY() - u.getY())
                 if closestBase == None or d < closestDistance:
                     closestBase = u2
