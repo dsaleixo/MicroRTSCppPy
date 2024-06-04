@@ -35,15 +35,17 @@ class Idle(ChildC,Node):
         
         pgs = gs.getPhysicalGameState()
 		
-        if u.getPlayer()==player  and automata._memory._freeUnit[u.getID()]  and u.getType().canAttack:
-            for  target in pgs.getUnits():
-                if target.getPlayer()!=-1 and target.getPlayer()!=u.getPlayer():
+        if u.getPlayer()==player  and automata._memory._freeUnit[u.getID()]  and u.getType().getCanAttack():
+            
+            for  target in pgs.getUnits(1-player).values():
+                    
                     dx = target.getX()-u.getX()
                     dy = target.getY()-u.getY()
                     d = (dx*dx+dy*dy)**0.5
                     if d<=u.getAttackRange() :
+                       
                         self._used = True
-                        automata._core.idle(u)
+                        automata._core.attack(u,target)
                         automata._memory._freeUnit[u.getID()] = False
                         
                         

@@ -35,7 +35,7 @@ class Move(AbstractAction):
     '''
     def execute(self, gs : GameState,  ru: ResourceUsage)->UnitAction :
         pgs = gs.getPhysicalGameState();
-        move = self._pf.findPath(self._unit, self._x+self._y*pgs.getWidth(), gs);
+        move = self._pf.findPathToPositionInRange(self._unit, self._x+self._y*pgs.getWidth(),1, gs);
 #       System.out.println("AStarAttak returns: " + move);
         
         if move.getType()!=UnitAction.getTYPE_NONE() and gs.isUnitActionAllowed(self._unit, move): return move

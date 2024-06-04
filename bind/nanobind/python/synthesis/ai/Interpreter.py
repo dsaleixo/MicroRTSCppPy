@@ -3,6 +3,7 @@ from typing import TYPE_CHECKING
 from ai.abstraction.Build import Build
 from ai.abstraction.Harvest import Harvest
 from ai.abstraction.Train import Train
+from ai.ai import AI
 
 from synthesis.ai.Memory import Memory
 
@@ -30,7 +31,7 @@ from ai.abstraction.AbstractionLayerAI import AbstractionLayerAI
 
 
 
-class Interpreter:
+class Interpreter(AI):
     
     def __init__(self,pgs : PhysicalGameState, utt : UnitTypeTable, n : Node) -> None:
         self._n : Node = n
@@ -58,16 +59,15 @@ class Interpreter:
         #    print(a[0].toString(),a[1].toString())
         return pa
         
-        
-        
+
+   
         
        
     def  farthestAllyBase(self, pgs: PhysicalGameState, player: int,  unitAlly : Unit) ->Unit :
 
         farthestBase = None
         farthesttDistance = 0
-        for  u2 in pgs.getUnits():
-            if (u2.getType().name == "Base"):
+        for  u2 in pgs.getUnits(player).values():
 
                 if (u2.getPlayer() >= 0 and u2.getPlayer() == player) :
                     d = abs(u2.getX() - unitAlly.getX()) + abs(u2.getY() - unitAlly.getY());
@@ -136,7 +136,7 @@ class Interpreter:
                     
                     if  isinstance(a2,Train)  :
                         
-                        if a2.type.getName()==typeU:
+                        if a2._type.getName()==typeU:
                             aux=True
                             
                             	

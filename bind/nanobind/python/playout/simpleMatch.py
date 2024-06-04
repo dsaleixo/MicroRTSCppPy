@@ -1,11 +1,12 @@
 
 from MicroRTS_NB.MicroRTS_NB import GameState
 import time
+from ai.ai import AI
 from util.screen import ScreenMicroRTS
 
 class SimpleMatch:
     
-    def playout(self,gs_a :GameState,ai0,ai1,max_tick : int,show_scream:True)->int:
+    def playout(self,gs_a :GameState,ai0 : AI,ai1:AI,max_tick : int,show_scream:True)->int:
         gs = GameState(gs_a)
         ai0.resert()
         ai1.resert()

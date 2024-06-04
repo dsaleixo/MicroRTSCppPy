@@ -11,6 +11,8 @@ from MicroRTS_NB import AStarPathFinding
 from MicroRTS_NB import Player
 from MicroRTS_NB import ResourceUsage
 
+from ai.ai import AI
+
 
 
 from .Move import Move
@@ -21,7 +23,7 @@ from .Idle import Idle
 from .Harvest import Harvest
 
 
-class AbstractionLayerAI:
+class AbstractionLayerAI(AI):
     VERIFY_ACTION_CORRECTNESS = False;
     def __init__(self, pgs : PhysicalGameState):
         self._actions = {}
@@ -37,6 +39,11 @@ class AbstractionLayerAI:
       
     def clear(self):
         self._actions.clear()
+
+
+    
+    def getActions(self, gs : GameState,player : int):
+        pass
 
     def translateActions(self, player : int,  gs : GameState) :
         pgs = gs.getPhysicalGameState()

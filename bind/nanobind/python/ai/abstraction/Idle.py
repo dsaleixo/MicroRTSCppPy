@@ -1,5 +1,5 @@
 from .AbstractAction import AbstractAction
-from MicroRTS_NB import Unit,UnitAction,ResourceUsage,GameState
+from MicroRTS_NB import GameState, Unit,UnitAction,ResourceUsage
 
 class Idle(AbstractAction):
     
@@ -11,7 +11,7 @@ class Idle(AbstractAction):
         super().__init__(u)
     
     
-    def completed(self, gs , GameState)->bool:
+    def completed(self, gs : GameState)->bool:
         return False
     
     
@@ -23,9 +23,10 @@ class Idle(AbstractAction):
 
     def execulte(self, gs : GameState,  ru : ResourceUsage)->UnitAction :
         pgs = gs.getPhysicalGameState();
+       
         if  not self._unit.getType().getCanAttack(): return None;
-        for target in pgs.getUnits() :
-            if target.getPlayer()!=-1 and target.getPlayer()!=self._unit.getPlayer():
+        for target in pgs.getUnits(1-self._unit.getPlayer()).values() :
+            
                 dx = target.getX()-self._unit.getX();
                 dy = target.getY()-self._unit.getY();
                 d = (dx*dx+dy*dy)**0.5;

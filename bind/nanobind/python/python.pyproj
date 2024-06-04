@@ -45,6 +45,7 @@
     <Compile Include="ai\abstraction\Move.py" />
     <Compile Include="ai\abstraction\Train.py" />
     <Compile Include="ai\abstraction\__init__.py" />
+    <Compile Include="ai\ai.py" />
     <Compile Include="ai\rush\CombatRush.py" />
     <Compile Include="ai\rush\__init__.py" />
     <Compile Include="ai\__init__.py" />
@@ -58,6 +59,8 @@
     <Compile Include="playout\simpleMatch.py" />
     <Compile Include="playout\tests\test0.py" />
     <Compile Include="python.py" />
+    <Compile Include="selfPlay\selfPlay.py" />
+    <Compile Include="selfPlay\selfPlayDefault.py" />
     <Compile Include="synthesis\ai\Interpreter.py" />
     <Compile Include="synthesis\ai\Memory.py" />
     <Compile Include="synthesis\baseDSL\actionBase\attack.py" />
@@ -85,6 +88,25 @@
     <Compile Include="synthesis\baseDSL\util\control.py" />
     <Compile Include="synthesis\baseDSL\util\factory.py" />
     <Compile Include="synthesis\baseDSL\util\factory_Base.py" />
+    <Compile Include="synthesis\extent1DSL\almostTerminal\direction_E1.py" />
+    <Compile Include="synthesis\extent1DSL\almostTerminal\n_E1.py" />
+    <Compile Include="synthesis\extent1DSL\almostTerminal\opponentPolicy_E1.py" />
+    <Compile Include="synthesis\extent1DSL\almostTerminal\targetPlayer_E1.py" />
+    <Compile Include="synthesis\extent1DSL\almostTerminal\utype_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\attack_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\build_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\harvest_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\idle_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\moveAway_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\moveToUnit_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Action\train_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Main\c_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Main\empty_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Main\for_S_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Main\s_E1.py" />
+    <Compile Include="synthesis\extent1DSL\extent1Main\s_s_E1.py" />
+    <Compile Include="synthesis\extent1DSL\tests\sampleMutation.py" />
+    <Compile Include="synthesis\extent1DSL\util\Factory_E1.py" />
     <Compile Include="tests\test.py" />
     <Compile Include="tests\test1.py" />
     <Compile Include="tests\test2.py" />
@@ -101,6 +123,7 @@
     <Folder Include="neuralSymbol\" />
     <Folder Include="neuralSymbol\model" />
     <Folder Include="neuralSymbol\model\models\" />
+    <Folder Include="selfPlay\" />
     <Folder Include="playout\" />
     <Folder Include="playout\tests\" />
     <Folder Include="synthesis\" />
@@ -112,6 +135,13 @@
     <Folder Include="synthesis\baseDSL\conditionBase\" />
     <Folder Include="synthesis\baseDSL\tests\" />
     <Folder Include="synthesis\baseDSL\util" />
+    <Folder Include="synthesis\extent1DSL\" />
+    <Folder Include="synthesis\extent1DSL\extent1Main\" />
+    <Folder Include="synthesis\extent1DSL\extent1Action\" />
+    <Folder Include="synthesis\extent1DSL\almostTerminal\" />
+    <Folder Include="synthesis\extent1DSL\LocalSearch\" />
+    <Folder Include="synthesis\extent1DSL\tests\" />
+    <Folder Include="synthesis\extent1DSL\util\" />
     <Folder Include="tests" />
     <Folder Include="util" />
   </ItemGroup>

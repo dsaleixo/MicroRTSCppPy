@@ -87,8 +87,7 @@ class Direction(AlmostTerminal):
         distance = 0
         first = True
         #score is minus distance to closest resource
-        for u in pgs.getUnits():
-            if u.getPlayer()==1-player:
+        for u in pgs.getUnits(1-player).values():
                 dx = abs(u.getX() - x) 
                 dy = abs(u.getY() - y)
                 d = dx*dx +dy*dy

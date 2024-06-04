@@ -39,6 +39,7 @@ public:
          * @return
          */
          int getTime();
+         UnitTypeTable* getUTT();
 
     /**
      * Removes a unit from the game

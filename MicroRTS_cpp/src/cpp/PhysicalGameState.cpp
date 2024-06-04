@@ -140,10 +140,10 @@ void PhysicalGameState::removeUnit(Unit &u) {
         }
     }
     else  {
-            auto f = this->unitsP0.find(u.ID);
-            if (f != this->unitsP0.end()) {
+            auto f = this->unitsR.find(u.ID);
+            if (f != this->unitsR.end()) {
                 delete f->second;
-                this->unitsP0.erase(u.ID);
+                this->unitsR.erase(u.ID);
             }
     }
     

@@ -274,6 +274,7 @@ void UnitAction::execute(Unit &u, GameState& s) {
                
                 maybeAResource->setResources(maybeAResource->getResources() - u.getHarvestAmount());
                 if (maybeAResource->getResources() <= 0) {
+                
                     s.removeUnit(*maybeAResource);
                 }
                 u.setResources(u.getHarvestAmount());

@@ -113,6 +113,7 @@ NB_MODULE(MicroRTS_NB, m) {
 	 nb::class_<AStarPathFinding>(m, "AStarPathFinding")
         .def(nb::init<int,int>())
         .def("findPathToAdjacentPosition", &AStarPathFinding::findPathToAdjacentPosition)
+        .def("findPath", &AStarPathFinding::findPath)
         .def("findPathToPositionInRange", &AStarPathFinding::findPathToPositionInRange);
 
  nb::class_<UnitActionAssignment>(m, "UnitActionAssignment")
@@ -171,6 +172,7 @@ nb::class_<GameState>(m, "GameState")
         .def("winner", &GameState::winner)
         .def("gameover", &GameState::gameover)
         .def("updateScream", &GameState::updateScream)
+        .def("getUTT", &GameState::getUTT, nb::rv_policy::reference)
         .def("getPhysicalGameState", &GameState::getPhysicalGameState, nb::rv_policy::reference);
 
 	nb::class_<ResourceUsage>(m, "ResourceUsage")

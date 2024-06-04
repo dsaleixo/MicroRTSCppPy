@@ -7,6 +7,10 @@
 #include <cstdlib>
 #include <algorithm>
 
+UnitTypeTable* GameState::getUTT() {
+    return this->utt;
+}
+
 GameState::~GameState() {
    
     this->unitActions.clear();
@@ -14,7 +18,7 @@ GameState::~GameState() {
     for (int i = 0; i < this->pgs->getWidth(); i++) delete[] this->_free[i];
     delete this->_free;
     
-    //if (this->pgs != NULL) delete this->pgs;
+    if (this->pgs != NULL) delete this->pgs;
     
     this->pgs = nullptr;
        
@@ -506,6 +510,7 @@ UnitActionAssignment* GameState::getActionAssignment(Unit &u) {
 
 void GameState::removeUnit(Unit &u) {
     this->unitActions.erase(u.ID);
+    
     this->pgs->removeUnit(u);
 
     

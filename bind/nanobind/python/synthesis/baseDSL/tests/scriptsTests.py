@@ -12,7 +12,7 @@ class ScriptsTests(object):
     @staticmethod
     def test0():
         script = ScriptsToy.scriptEmpty()
-        script0 = ScriptsToy.script4()
+        script0 = ScriptsToy.script6()
         print(script.translate())
         map = "./maps/basesWorkers32x32A.xml"
         utt = UnitTypeTable(2)

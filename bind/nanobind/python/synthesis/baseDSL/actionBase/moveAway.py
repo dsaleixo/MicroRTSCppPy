@@ -33,17 +33,17 @@ class MoveAway(ChildC,Node):
     
     
     def interpret(self,gs : GameState, player:int, u : Unit, automata :Interpreter) -> None:
-        gs2 = gs.clone()
-        pgs = gs2.getPhysicalGameState()
-        if u.getType().canMove and u.getPlayer()==player and automata._memory[u.getId()]  :
+        
+        pgs = gs.getPhysicalGameState()
+        if u.getType().getCanMove() and u.getPlayer()==player and automata._memory._freeUnit[u.getID()]  :
             u2 = automata.farthestAllyBase(pgs,player,u)
             if(u2!=None) :
-                pf =  automata._core.pf
-                move = pf.findPathToPositionInRange2(u, u2.getX() + u2.getY() * pgs.getWidth(),1, gs2 )
+                pf =  automata._core._pf
+                move = pf.findPathToPositionInRange(u, u2.getX() + u2.getY() * pgs.getWidth(),1, gs )
                 if  move!=None :
                     self._used = True
-                    automata._core.move(u, move.m_a, move.m_b)
-                    automata._memory[u.getId()] = False
+                    automata._core.move(u, u2.getX(), u2.getY())
+                    automata._memory._freeUnit[u.getID()] = False
 					
 					
     def load(self, l : list[str], f :Factory):
