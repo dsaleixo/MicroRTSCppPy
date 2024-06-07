@@ -115,8 +115,8 @@ bool GameState::isUnitActionAllowed(Unit &u, UnitAction &ua) {
 }
 
 
-GameState::GameState(PhysicalGameState* a_pgs, UnitTypeTable* a_utt) {
-	this->pgs =  a_pgs;
+GameState::GameState(string map, UnitTypeTable* a_utt) {
+	this->pgs =   PhysicalGameState::load(map, *a_utt);
 	this->utt = a_utt;
 	this->time = 0;
     this->_free = new bool* [this->pgs->getWidth()];

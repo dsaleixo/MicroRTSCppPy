@@ -15,11 +15,11 @@ from MicroRTS_NB import GameState, UnitTypeTable
 
 class SelfPlayDefault(SelfPlay):
     
-    def __init__(self,ai:Node,n:int):
+    def __init__(self,n:int):
         self._n : int = n
         self._progs : list[Node] = []
         self._sm = SimpleMatch()
-        self._progs.append(ai)
+       
         self._n_count = 0
        
         

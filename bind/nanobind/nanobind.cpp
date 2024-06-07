@@ -158,7 +158,7 @@ NB_MODULE(MicroRTS_NB, m) {
         .def("addUnitAction", &PlayerAction::addUnitAction);
 
 nb::class_<GameState>(m, "GameState")
-        .def(nb::init<PhysicalGameState*, UnitTypeTable*>())
+        .def(nb::init<string, UnitTypeTable*>())
         .def(nb::init<GameState&>())
         .def("getActionAssignment", &GameState::getActionAssignment, nb::rv_policy::reference)
         .def("getTime", &GameState::getTime)

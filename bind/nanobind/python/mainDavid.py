@@ -1,11 +1,11 @@
 import sys
 
+from MicroRTS_NB import GameState, PhysicalGameState, UnitTypeTable
 
-from playout.tests.test0 import Test0
-from synthesis.baseDSL.tests.scriptsTests import ScriptsTests
-from synthesis.extent1DSL.tests.sampleMutation import SampleMutation
+
+
+from synthesis.extent1DSL.tests.main_LS import MainSynthesis
+
 
 if __name__ == "__main__":
-    map = "./maps/basesWorkers32x32A.xml"
-    SampleMutation.test2()
-    
+    MainSynthesis.execute(sys.argv)

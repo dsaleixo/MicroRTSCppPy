@@ -32,7 +32,7 @@ public:
      * @param a_pgs
      * @param a_utt
      */
-     GameState(PhysicalGameState* a_pgs, UnitTypeTable* a_utt);
+     GameState(string map, UnitTypeTable* a_utt);
      GameState(const GameState& other);
         /**
          * Current game timestep (frames since beginning)

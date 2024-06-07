@@ -49,6 +49,9 @@
     <Compile Include="ai\rush\CombatRush.py" />
     <Compile Include="ai\rush\__init__.py" />
     <Compile Include="ai\__init__.py" />
+    <Compile Include="huntingTerritory\GameStateJavaPy.py" />
+    <Compile Include="mmt.py" />
+    <Compile Include="logger\stdout_logger.py" />
     <Compile Include="main.py" />
     <Compile Include="mainDavid.py" />
     <Compile Include="neuralSymbol\model\dataset0.py" />
@@ -105,6 +108,14 @@
     <Compile Include="synthesis\extent1DSL\extent1Main\for_S_E1.py" />
     <Compile Include="synthesis\extent1DSL\extent1Main\s_E1.py" />
     <Compile Include="synthesis\extent1DSL\extent1Main\s_s_E1.py" />
+    <Compile Include="synthesis\extent1DSL\LocalSearch\HC.py" />
+    <Compile Include="synthesis\extent1DSL\LocalSearch\individuals\individual.py" />
+    <Compile Include="synthesis\extent1DSL\LocalSearch\individuals\individual_Default.py" />
+    <Compile Include="synthesis\extent1DSL\LocalSearch\SA.py" />
+    <Compile Include="synthesis\extent1DSL\mutation\mutation.py" />
+    <Compile Include="synthesis\extent1DSL\mutation\mutation0.py" />
+    <Compile Include="synthesis\extent1DSL\mutation\mutation1.py" />
+    <Compile Include="synthesis\extent1DSL\tests\main_LS.py" />
     <Compile Include="synthesis\extent1DSL\tests\sampleMutation.py" />
     <Compile Include="synthesis\extent1DSL\util\Factory_E1.py" />
     <Compile Include="tests\test.py" />
@@ -123,6 +134,9 @@
     <Folder Include="neuralSymbol\" />
     <Folder Include="neuralSymbol\model" />
     <Folder Include="neuralSymbol\model\models\" />
+    <Folder Include="logger\" />
+    <Folder Include="huntingTerritory\" />
+    <Folder Include="jars\" />
     <Folder Include="selfPlay\" />
     <Folder Include="playout\" />
     <Folder Include="playout\tests\" />
@@ -140,6 +154,8 @@
     <Folder Include="synthesis\extent1DSL\extent1Action\" />
     <Folder Include="synthesis\extent1DSL\almostTerminal\" />
     <Folder Include="synthesis\extent1DSL\LocalSearch\" />
+    <Folder Include="synthesis\extent1DSL\LocalSearch\individuals\" />
+    <Folder Include="synthesis\extent1DSL\mutation\" />
     <Folder Include="synthesis\extent1DSL\tests\" />
     <Folder Include="synthesis\extent1DSL\util\" />
     <Folder Include="tests" />
